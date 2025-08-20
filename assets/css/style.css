@@ -746,6 +746,8 @@ margin-block-end: 6rem;
   align-items: center;
   height: 100%;
   width: 100%;
+  overflow: hidden;
+  padding: 1rem 0;
 }
 
 .nav-toggle-btn .close,
@@ -762,9 +764,13 @@ display: block;
   position: absolute;
   top: 85%;
   right: 16px;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: space-between;
   background-color: var(--neutral-100);
   min-width: 260px;
-  padding: 16px;
+  padding: 1rem 1.5rem;
   border-radius: var(--radius-large);
   visibility: hidden;
   opacity: 0;
@@ -780,13 +786,13 @@ display: block;
   display: flex;
   width: 30rem;
   align-items: center;
+  justify-content: flex-start
 }
 
 .logo {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: max-content;
   height: auto;
 }
 
@@ -794,7 +800,7 @@ display: block;
   color: white;
   margin-left: 1rem;
   font-size: 1.6rem;
-  margin-top: 1.8rem;
+  margin-top: 1rem;
 }
 
 .logo-text .color-logo {
@@ -809,6 +815,11 @@ display: block;
 .logo img{
 width: 5rem;
 height: 5rem;
+align-items: center;
+justify-content: center;
+display: flex;
+margin-block-end: 1rem;
+margin-left: 1rem;
 }
 
 
@@ -854,8 +865,14 @@ transition: var(--transition-duration-quick) var(--transition-easing-quick);
   display: none;
 
 }
-
+.hero-banner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--radius-extra-small);
+}
 .hero{
+  width: 100%;
   position: relative;
   background-color: var(--primary-40);
   color: var(--neutral-90);
