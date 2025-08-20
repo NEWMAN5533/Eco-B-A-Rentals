@@ -19,7 +19,7 @@
   * colors
   */
 
-  --white: #efeded;
+  --white: #fafafa;
 --yellow: #F6BD26;
 --primary-100: #2179FF;
 --primary-90: #1E6DE5;
@@ -417,10 +417,10 @@ body{
 
 .card {
   border-radius: var(--radius-large);
-  padding: 28px;
-  gap: 2rem;
+  padding: 1px;
+  gap: 4rem;
   overflow: hidden;
-  box-shadow: var(--shadow-1);
+  box-shadow: var(--shadow-3);
   transition: var(--transition-duration-quick) var(--transition-easing-quick);
   background-color: var(--neutral-100);
 }
@@ -429,6 +429,10 @@ body{
   width: 100%;
 }
 
+
+.card-content {
+  padding: 26px;
+}
 
 
 
