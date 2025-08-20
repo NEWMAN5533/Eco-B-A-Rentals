@@ -561,8 +561,8 @@ margin-block-end: 6rem;
 
 .agent-container .agent-card {
   position: relative;
-  width: 25rem;
-  height: 33rem;
+  width: 32rem;
+  height: 37rem;
   display: flex;
   justify-self: center;
   flex-direction: column;
@@ -571,8 +571,8 @@ margin-block-end: 6rem;
   align-self: center;
   gap: 2rem;
   background-color: transparent;
-  margin-block-start: 3rem;
-  margin-block-end: 2rem;
+  margin-block-start: 4rem;
+  margin-block-end: 4rem;
 }
 
 .agent-card img {
@@ -878,6 +878,7 @@ transition: var(--transition-duration-quick) var(--transition-easing-quick);
   color: var(--neutral-90);
   padding-block: 130px 60px;
   overflow: hidden;
+  margin: 0;
   isolation: isolate;
 }
 
