@@ -656,8 +656,8 @@ transition: var(--transition-duration-quick) var(--transition-easing-quick);
   #HERO
 \*-----------------------------------*/
 .hero-banner{
-  display: flex;
-  align-self: center;
+  display: none;
+
 }
 
 .hero{
