@@ -418,6 +418,7 @@ body{
 .card {
   border-radius: var(--radius-large);
   padding: 1px;
+  border: 1px solid rgb(211, 206, 206);
   gap: 4rem;
   overflow: hidden;
   box-shadow: var(--shadow-3);
@@ -442,9 +443,10 @@ body{
 
 .card-banner {
   position: relative;
+
 }
 
-.card-banner figure img{
+.card-banner img{
 object-fit: cover;
 width: max-content;;
 
@@ -538,6 +540,170 @@ color: var(--error-100);
   color: var(--neutral-20);
   ;
 }
+
+
+/**
+* AGENTS CARD SECTION STYLING
+**/
+.agent-container{
+  position: relative;
+width: 100%;
+height: auto;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+align-items: flex-start;
+overflow: hidden;
+background-color: transparent;
+}
+
+.agent-container .agent-card {
+  position: relative;
+  width: 25rem;
+  height: 33rem;
+  display: flex;
+  justify-self: center;
+  flex-direction: column;
+  border-radius: 1.4rem;
+  border: 1px solid #ccc;
+  align-self: center;
+  gap: 2rem;
+  background-color: transparent;
+  margin-block-start: 3rem;
+  margin-block-end: 2rem;
+}
+
+.agent-card img {
+  width: 15rem;
+  height: 15rem;
+  object-fit: calc(100% -0.25px);
+  align-self: center;
+  border-radius: 50%;
+}
+
+.agent-card .card-top {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  overflow:hidden;
+  border-start-end-radius: 1.2rem;
+  border-start-start-radius: 1.2rem;
+  background-color: var(--primary-40);
+}
+
+
+.card-middle {
+  display: flex;
+  width: 100%;
+  height: 4rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-middle span {
+  width: 3.2rem;
+  height: 2.2rem;
+  border-radius: 0.6rem;
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-block-start: -1rem;
+  background-color: rgb(48, 48, 74);
+
+}
+
+
+.agent-card .card-bottom {
+  width: 100%;
+  height: 22rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-end-end-radius: 1.2rem;
+  border-end-start-radius: 1.2rem;
+}
+
+.card-bottom button {
+  width: 90%;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  border-radius: 2rem;
+  color: rgb(67, 63, 63);
+  font-size: 1.3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  ;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid #8d8989;
+  margin-block-end: 16px;
+}
+
+.card-bottom {
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card-bottom ul {
+  text-decoration: none;
+  outline: none;
+}
+
+.card-bottom li {
+  list-style: none;
+}
+
+.card-bottom .list-name {
+  margin-left: -4rem;
+  font-family: sans-serif;
+  margin-block-end: -1rem;
+}
+
+.card-bottom .id{
+  color: rgb(11, 9, 9);
+  padding-block-end:2rem ;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.card-bottom h6 {
+  color: rgb(13, 12, 12);
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*-----------------------------------*\
   #HEADER
