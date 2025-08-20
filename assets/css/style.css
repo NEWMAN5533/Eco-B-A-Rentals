@@ -410,10 +410,15 @@ body{
 
 .card {
   border-radius: var(--radius-large);
+  padding: 24px;
+  gap: 1rem;
   overflow: hidden;
   box-shadow: var(--shadow-2);
   transition: var(--transition-duration-quick) var(--transition-easing-quick);
 }
+
+
+
 
 .card:where(:hover, :focus-within) {
   box-shadow: var(--shadow-4);
@@ -423,8 +428,14 @@ body{
   position: relative;
 }
 
+.card-banner figure img{
+object-fit: cover;
+width: max-content;;
+
+}
+
 .card-banner .type {
-  margin-left:8rem;
+  margin-left: 8rem;
   background-color: var(--neutral-100);
 }
 
@@ -759,7 +770,7 @@ margin-block: 16px 32px;
 .property-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px;
+  gap: 26px;
 }
 
 
