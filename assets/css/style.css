@@ -389,18 +389,7 @@ body{
   background-color: var(--primary-80);
 }
 
-/*ICON BTN*/
-.icon-btn{
-  height: 40px;
-  width:40px;
-  display: grid;
-  place-items: center;
-  background-color: var(--neutral-100);
-  color:var(--neutral-10);
-  border-radius: var(--radius-small);
-  box-shadow: var(--shadow-3);
-  transition: var(--transition-duration-quick) var(--transition-easing-quick);
-}
+
 
 .icon-btn:where(:hover, :focus-visible){
   background-color: var(--neutral-90);
@@ -652,7 +641,7 @@ margin-block-end: 6rem;
 
 .card-bottom button {
   width: 90%;
-  height: 2.4rem;
+  height: 3rem;
   display: flex;
   align-items: center;
   border-radius: 2rem;
@@ -661,11 +650,17 @@ margin-block-end: 6rem;
   font-family: Arial, Helvetica, sans-serif;
   ;
   justify-content: center;
-  flex-direction: column;
+  
   text-align: center;
   background-color: transparent;
   border: 1px solid #8d8989;
   margin-block-end: 16px;
+}
+
+.card-bottom button i {
+  font-size: 1.4rem;
+  color: rgb(11, 9, 9);
+  margin-right: 0.5rem;
 }
 
 .card-bottom {
@@ -744,6 +739,8 @@ margin-block-end: 6rem;
   animation: slide_in 500ms ease forwards;
   height: 72px;
   background-color: var(--primary-40);
+  align-items: center;
+  justify-content: center;
 }
 
 @keyframes slide_in {
@@ -766,6 +763,19 @@ margin-block-end: 6rem;
   padding: 1rem 0;
 }
 
+.nav-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 35px;
+  height: 30px;
+  border-radius: 0.4rem;
+  background-color: var(--neutral-100);
+  box-shadow: var(--shadow-3);
+  transition: var(--transition-duration-quick) var(--transition-easing-quick);
+}
+
 .nav-toggle-btn .close,
 .nav-toggle-btn.active .open {
 display: none;
@@ -774,6 +784,7 @@ display: none;
 .nav-toggle-btn .open,
 .nav-toggle-btn.active .close {
 display: block;
+
 }
 
 .navbar{
@@ -786,7 +797,7 @@ display: block;
   justify-content: space-between;
   background-color: var(--neutral-100);
   min-width: 100%;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2rem;
   border-radius: var(--radius-large);
   visibility: hidden;
   opacity: 0;
@@ -800,10 +811,8 @@ display: block;
 
 .navbar .logo {
   display: flex;
-  width: 30rem;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: 1.5rem;
 }
 
 .container .nav-left {
@@ -825,18 +834,10 @@ justify-content: space-between;
   margin-top: 1rem;
 }
 
-.logo-text .color-logo {
-  display: flex;
-  color: red;
-  align-items: center;
-  ;
-}
-
-
 
 .logo img{
-width: 5rem;
-height: 5rem;
+width: 4.5rem;
+height: 4.5rem;
 align-items: center;
 justify-content: center;
 display: flex;
@@ -848,7 +849,7 @@ margin-left: 1rem;
 .navbar.active{
   visibility: visible;
   opacity: 1;
-  scale: 1;;
+  scale: 1;
 }
 
 .navbar,
@@ -856,6 +857,7 @@ margin-left: 1rem;
 .navbar-wrapper {
   display: grid;
   gap: 8px;
+
 }
 
 
@@ -900,12 +902,15 @@ transition: var(--transition-duration-quick) var(--transition-easing-quick);
   color: var(--neutral-90);
   padding-block: 130px 60px;
   overflow: hidden;
-  margin: 0 3rem;
   isolation: isolate;
 }
 
 .hero-title {
   color: var(--neutral-100);
+  font-size: var(--fs-headline-small);
+  line-height: var(--lh-headline-small);
+  font-weight: 500;
+  margin-top: 6rem;
 }
 
 .hero-text {
@@ -958,10 +963,13 @@ margin-block: 16px 32px;
 }
 
 .search-btn {
+  width: 96%;
+  align-self: center;
   background-color: var(--primary-100);
   display: flex;
   color: var(--neutral-100);
   height: 64px;
+  justify-self: center;
   justify-content: center;
   align-items: center;
   padding-inline: 24px;
@@ -972,16 +980,20 @@ margin-block: 16px 32px;
 
 .search-btn:where(:hover, :focus){
   background-color: var(--primary-80);
+ 
 }
 
-.search-btn:where(:active, :focus-visible){
+.search-btn:where(.active, :focus-visible){
   background-color: var(--primary-70 );
+  
 }
 
 .hero .bg-pattern {
   position: absolute;
   top: 50%;
   left: 25%;
+  margin: 0;
+  object-fit: cover;
   right: 0;
   translate: 0 -50%;
   min-height: 100%;
@@ -993,7 +1005,7 @@ margin-block: 16px 32px;
   #PROPERTY
 \*-----------------------------------*/
 
-.property-section {
+.property section {
   padding-block-start: 60px;
 
 }
@@ -1358,13 +1370,18 @@ margin-block: 16px 32px;
     min-width: 96%;
     padding: 0 1rem;
     margin:  0;
+    justify-self: center;
+    align-self: center;
     overflow: hidden;
   }
 
   .hero{
     min-width: 100%;
+    height: auto;
     margin: 0;
-    padding: 0 1rem;
+    justify-self: center;
+    align-self: center;
+    padding: 5rem 1rem;
     overflow: hidden;
     justify-content: center;
     align-items: center;
@@ -1372,6 +1389,8 @@ margin-block: 16px 32px;
   .hero-banner{
     min-width: 100%;
     margin: 0;
+    justify-self: center;
+    align-self: center;
     padding: 0 1rem;
     overflow: hidden;
   }
