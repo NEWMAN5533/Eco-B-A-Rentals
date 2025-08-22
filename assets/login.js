@@ -120,6 +120,28 @@ if (registerBtn) {
 
 
 
+  // 🔹 Google Provider
+  const provider = new GoogleAuthProvider();
+
+  // 🔹 Google Login button
+  const googleLoginBtn = document.getElementById("googleLoginBtn");
+  if (googleLoginBtn) {
+    googleLoginBtn.addEventListener("click", () => {
+      signInWithPopup(auth, provider)
+        .then((result) => {
+          const user = result.user;
+          console.log("Google Login Success:", user);
+          // ✅ Redirect to homepage
+          window.location.href = "index.html";
+        })
+        .catch((error) => {
+          console.error("Google Login Error:", error.message);
+          alert(error.message);
+        });
+    });
+  }
+
+
 
 
 
