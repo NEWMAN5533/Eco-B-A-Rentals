@@ -119,6 +119,21 @@ if (registerBtn) {
 }
 
 
+ // 🔹 Protect routes
+  onAuthStateChanged(auth, (user) => {
+    if (!user) {
+      // If NOT logged in → force redirect to login
+      if (window.location.pathname !== "/auth.html") {
+        window.location.href = "loginPage.html";
+      }
+    } else {
+      // If logged in → force redirect to homepage
+      if (window.location.pathname === "/auth.html") {
+        window.location.href = "index.html";
+      }
+    }
+  });
+
 
   // 🔹 Google Provider
   const provider = new GoogleAuthProvider();
