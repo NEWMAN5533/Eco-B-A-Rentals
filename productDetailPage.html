@@ -3,86 +3,110 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eco-B/A-Rentals</title>
-  <meta name="title" content="Eco-B/A-Rentals">
-  <meta name="description" content="This is related to website developed by IlysCode">
-  <!------favicons links------->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-    <!---google fonts links-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-<!---google icon links-->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0..1,0" />
-<!--custom css link------>
-
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-
-
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>property Enquiry</title>
+  <link rel="stylesheet" href="./assets/propertyDetail.css">
 </head>
 <body>
-<header class="header" data-header>
-  <div class="container">
-    <!---LOGO SECTION-->
-    <div class="nav-left">
-      <a href="index.html" class="logo">
-      <img src="./favicon.svg" width="190" height="28" alt="image">
-      <span class="logo-text">
-        <h1>Eco-B/A Rentals</h1>
-      </span>
-    </a>
+<!----------NAVIGATION BAR @ Pd PAGE------->
+<header>
+<nav class="login-bar">
+
+  <div class="left">
+<img src="./favicon.svg" alt="logo">
+  </div>
+  <!----HAMBURGER FOR MENU-ICON----->
+ <div class="right">
+ <div class="hamburger-menu">
+  <span></span>
+  <span></span>
+  <span></span>
+ </div>
+ </div>
+</nav>
+</header>
+<!-------MAIN SECTION------->
+<main>
+<div class="main-container">
+  <div class="image-container">
+  <div class="detail-badge">
+    <!-------BADGE------>
+      <span class="badge">Sale</span>
+      <span class="label-medium">10 days ago</span>
+    <!--------ENDS------>
+  </div>
+    <div class="image-track-left">
+      <img src="./assets/images/pic6.jpg" alt="image" class="property-detail-pics">
+    </div>
+    <div class="image-track-right">
+      <img src="./assets/images/pic6.jpg" alt="image" class="property-detail-pics">
+
 
     </div>
-      <!---NAVBAR SECTION----->
-      <nav class="navbar"data-navbar>
-        <ul class="navbar-list">
-          <li>
-            <a href="index.html" class="navbar-link label-medium active">Home</a>
-          </li>
-          <li>
-            <a href="rentPage.html" class="navbar-link label-medium">Rent</a>
-          </li>
-          <li>
-            <a href="rentPage.html" class="navbar-link label-medium">
-              Sell
-            </a>
-          </li>
-          <li>
-            <a href="buyPage.html" class="navbar-link label-medium">Buy</a>
-          </li>
-            <li>
-            <a href="about.html" class="navbar-link label-medium">
-              About</a>
-          </li>
-        </ul>
-        <!---NAVBAR WRAPPER--RIGHT SIDE--->
-        <div class="navbar-wrapper">
-          <a href="loginPage.html" class="btn-link label-medium">Login</a>
-          <a href="signInPage.html" class="btn btn-fill label-medium">Get Started</a>
-        </div>
-      </nav>
-      <!--NAV TOGGLE BTN-RIGHT SIDE--->
-      <button class="nav-toggle-btn icon-btn" aria-label="toggle navbar" data-nav-toggler>
-
-      <span class="material-symbols-rounded open" aria-hidden="true">menu</span>
-
-<span class="material-symbols-rounded close" aria-hidden="true">close
-
-</span>
-      </button>
+<!------container ends----->
   </div>
-</header>
+  <!-------btt-->
+<div class="bottom-content">
+  <div class="location-detail">
+    <small>Brong Ahafo, Sunyani Municipal, 10 days ago</small>
+    <h6><small>Promoted</small></h6>
+  </div>
+
+  <div class="property-detail-title">
+    <h5>5 Bed rooms at Sunyani Municipal <br> for sale</h5>
+  </div>
+
+  <div class="property-price">
+    <h3>GH₵: 1,500,00</h3>
+    <div class="price-history">
+      <h5>price History ></h5>
+    </div>
+  </div>
+
+  <div class="request-call-btns">
+ <button class="call-btn">Request Call</button> 
+ <button class="call-btn">Show contact</button>
+
+  </div>
+
+</div>
+
+ 
+  <!---chat-with-seller---->
+  <div class="chat-with-seller">
+    <div class="container-title">
+      <h6>Chat with Agents</h6>
+
+    </div>
+
+    <!---------AGENT CALL BTNS---------->
+    <div class="enquiry-btns">
+        <button class="call">Is this available</button>
+ <button class="call">Make an offer</button>
+ <button class="call">Last Price</button>
+
+    </div>
+
+    <!-------START CHART-------->
+    <div class="start-chat-btn">
+      <input type="text" placeholder="Type a message">
+       <button class="start-chat">Start Chat</button>
+    </div>
+
+  
+
+
+  </div>
+  <!--------meta list-icons-->
+  <div class="meta-icons">
+
+  </div>
+</div>
 
 
 
 
 
-
-
-
-
+</main>
 
 </body>
 </html>
