@@ -32,9 +32,9 @@ body{
   width: 100%;
   text-align: center;
   line-height: 1.5rem;
-  background-color: rgba(41, 40, 40, 0.242);
+  background-color: rgba(43, 41, 41, 0.808);
   margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   font-family: sans-serif;
   border-radius: 8px;
 }
