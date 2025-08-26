@@ -116,7 +116,7 @@ document.querySelectorAll(".View-detail").forEach(button => {
     localStorage.setItem("propertyId", propertyId);
 
     // Redirect to details page
-    window.location.href = "detail.html";
+    window.location.href = "productDetailPage.html";
 });
 });
 
