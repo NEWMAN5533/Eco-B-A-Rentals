@@ -5,6 +5,9 @@
   font-family: 'poppins', sans-serif;
 }
 
+html{
+  scroll-behavior: smooth;
+}
 
 body{
   background:  url(../images/login-bg.jpg);
@@ -19,7 +22,7 @@ body{
   justify-content: center;
   flex-direction: column;
   min-height: 100vh;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 .terms {
@@ -53,6 +56,7 @@ body{
   color: rgb(253, 244, 244);
   font-size: 1.2rem;
   font-weight: 300;
+  padding: 0 8px
 
 }
 
