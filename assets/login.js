@@ -21,13 +21,6 @@ const firebaseConfig = {
 
 
 
-
-
-
-
-
-
-
 // variables //
 const loginSection = document.querySelector(".login-form");
 const registerSection = document.querySelector(".register-form");

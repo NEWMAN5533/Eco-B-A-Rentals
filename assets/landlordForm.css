@@ -1,0 +1,344 @@
+
+
+
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+  /**
+  * colors
+  */
+
+  --white: #fafafa;
+--yellow: #F6BD26;
+--primary-100: #2179FF;
+--primary-90: #1E6DE5;
+--primary-80: #1B61CC;
+--primary-70: #1755B2;
+--primary-40: #0D3166;
+--primary-20: #071833;
+--secondary-100: #21FFFF;
+--secondary-20: #073333;
+--neutral-100: #FAFCFF;
+--neutral-98: #F2F5FA;
+--neutral-95: #E9ECF2;
+--neutral-90: #DADFE5;
+--neutral-80: #C2C6CC;
+--neutral-60: #919499;
+--neutral-50: #797C80;
+--neutral-40: #616366;
+--neutral-30: #494A4D;
+--neutral-20: #303133;
+--neutral-10: #18191A;
+--neutral-5: #0C0C0D;
+--error-100: #FF2134;
+
+
+/* gradient */
+--gradient: linear-gradient(270deg 0%, #001D3D 100%);
+
+
+
+/* TYPOGRAPHY */
+
+/*FONT SIZE */
+--fs-base: 62.5%;
+--fs-headline-large: 3.6rem;
+--fs-headline-medium: 2.8rem;
+--fs-headline-small: 2.8rem;
+--fs-title-large: 2.2rem;
+--fs-title-medium: 2rem;
+--fs-title-small: 1.8rem;
+--fs-body-large: 1.6rem;
+--fs-body-medium: 1.6rem;
+--fs-label-large: 1.6rem;
+--fs-label-medium: 1.4rem;
+
+
+/*FONT FAMILY */
+--font-primary: 'Montserrat', sans-serif;
+
+
+
+/*Line height*/
+--lh-headline-large: 44px;
+--lh-headline-medium: 36px;
+--lh-headline-small: 36px;
+--lh-title-large: 28px;
+--lh-title-medium: 24px;
+--lh-title-small: 24px;
+--lh-body-large: 24px;
+--lh-body-medium: 24px;
+--lh-label-large: 24px;
+--lh-label-medium: 20px;
+
+
+/*Font weight*/
+
+--weight-bold: 700;
+--weight-semiBold: 600;
+--weight-regular: 400;
+
+
+/*Letter spacing*/
+
+--tracking-n-025: -0.25px;
+--tracking-p-05: 0.5px;
+
+/*Border Radius*/
+
+--radius-small: 8px;
+--radius-medium: 12px;
+--radius-large: 16px;
+--radius-extra-large: 32px;
+--radius-full: 1000px;
+--radius-circle: 50%;
+
+/*Box Shadow*/
+
+--shadow-1: 0px 2px 4px 0px #00000033;
+--shadow-2: 0px 5px 10px 0px #0000000D;
+--shadow-3: 0px 5px 10px 0px #00000033;
+--shadow-4: 0px 10px 20px 0px #0000001A;
+
+
+
+/* Transition*/
+--transition-easing-quick: cubic-bezier(0, 0.7, 0.3, 1);
+--transition-duration-quick: 200ms;
+--transition-duration-smooth: 500ms;
+
+}
+
+
+*{
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
+
+
+
+body {
+width: 100%;
+height: 100vh;
+background: none;
+margin: 0;
+padding: 0;
+overflow-y: auto;
+
+}
+
+
+
+
+
+/*-----------------------------------*\
+  #HEADER & NAVIGATION BAR
+\*-----------------------------------*/
+header {
+  position: absolute;
+  width: 100%;
+  margin: 0;
+  top: 0;
+  overflow: hidden;
+  z-index: 4;
+}
+.login-bar {
+  width: 100%;
+  height: 2.8rem;
+  margin: 0;
+  left: 0;
+  display: flex;
+  padding: 1rem 1rem;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #21264d;
+}
+
+.left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.left img {
+  width: 30px;
+  height: 30px;
+  align-self: center;
+  margin-left: 1rem;
+}
+
+
+.mid h2:hover {
+  text-decoration: underline;
+}
+
+.right{ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.right a {
+  color: rgb(249, 249, 251);
+  text-decoration: none;
+  font-size: 0.6rem;
+  font-weight: 500;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  justify-self: flex-end;
+  margin-right: 1rem;
+}
+
+.hamburger-menu {
+  display: block;
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  width: 25px;
+  height: 2px;
+  margin: 0 0 5px;
+  margin-right: 1rem;
+  border-radius: 3px;
+  background-color: #fff;
+  display: block;
+}
+
+
+
+.right a:hover{
+  text-decoration: underline;
+  color: rgb(33, 33, 96);
+}
+
+
+/**
+* LANDLORD FORM
+**/
+
+.landlord-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--neutral-98);
+  justify-self: center;
+  overflow-y: auto;
+}
+
+
+.landlord-form-header {
+  width: 100%;
+  text-align: center;
+  font-size: var(--fs-headline-small);
+  font-weight: 500;
+}
+
+.landlord-form-header h4 {
+  color: var(--neutral-70);
+  font-family: var(--font-s
+  ans-serif);
+  letter-spacing: var(--tracking-p-05);
+}
+
+/**
+* LANDLORD FORM
+**/
+.landlord-form {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+/**
+* FORM INPUT 
+**/
+.landlord-form input {
+  width: 100%;
+  height: 3.8rem;
+  padding: 0 1rem;
+  background-color: var(--neutral-98);
+  color: rgb(0, 0, 0);
+  font-size: 1.1rem;
+  border: 1px solid var(--neutral-80);
+  border-radius: var(--radius-small);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.landlord-form input::placeholder {
+  color: var(--neutral-5);
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-family: var(--font-primary);
+}
+
+.landlord-form input:focus {
+  border: 2px solid var(--primary-40);
+  background-color: none;
+  color: var(--neutral-5);
+  ::placeholder {
+    color: var(--neutral-5)
+  }
+}
+
+.landlord-form textarea {
+  width: 100%;
+  min-height: 8rem;
+  padding: 1rem;
+  background-color: var(--neutral-98);
+  color: rgb(32, 31, 31);
+  font-size: 1.1rem;
+  border: 1px solid var(--neutral-80);
+  border-radius: var(--radius-small);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  resize: vertical;
+}
+
+.landlord-form textarea::placeholder {
+  color: var(--neutral-5);
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-family: var(--font-primary);
+}
+
+.landlord-form textarea:focus {
+  border: 2px solid var(--primary-40);
+  background-color: none;
+  color: var(--neutral-5);
+  ::placeholder {
+    color: var(--neutral-5)
+  }
+}
+
+.landlord-form button {
+  width: 100%;
+  height: 3.8rem;
+  background-color: var(--primary-100);
+  color: var(--neutral-100);
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-small);
+  cursor: pointer;
+  transition: background-color var(--transition-duration-quick) var(--transition-easing-quick);
+}
+.landlord-form button:hover {
+  background-color: var(--primary-90);
+}

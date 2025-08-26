@@ -40,7 +40,7 @@
       <img src="./assets/images/pic6.jpg" alt="image" class="property-detail-pics">
     </div>
     <div class="image-track-right">
-      <img src="./assets/images/pic6.jpg" alt="image" class="property-detail-pics">
+      <img id="image" src="./assets/images/pic6.jpg" alt="image" class="property-detail-pics">
 
 
     </div>
@@ -49,16 +49,16 @@
   <!-------btt-->
 <div class="bottom-content">
   <div class="location-detail">
-    <small>Brong Ahafo, Sunyani Municipal, 10 days ago</small>
+    <small id="location">Brong Ahafo, Sunyani Municipal, 10 days ago</small>
     <h6><small>Promoted</small></h6>
   </div>
 
   <div class="property-detail-title">
-    <h5>5 Bed rooms at Sunyani Municipal <br> for sale</h5>
+    <h5 id="title">5 Bed rooms at Sunyani Municipal <br> for sale</h5>
   </div>
 
   <div class="property-price">
-    <h3>GH₵: 1,500,00</h3>
+    <h3 id="price">GH₵: 1,500,00</h3>
     <div class="price-history">
       <h5>price History ></h5>
     </div>
@@ -66,7 +66,7 @@
 
   <div class="request-call-btns">
  <button class="call-btn openHover">Request Call</button> 
- <button class="call-btn">Show contact</button>
+ <button onclick="callLandlord()" class="call-btn">Show contact</button>
 
   </div>
 
@@ -90,8 +90,8 @@
 
     <!-------START CHART-------->
     <div class="start-chat-btn">
-      <input type="text" placeholder="Type a message">
-      <button class="start-chat">Start Chat</button>
+      <input type="text" placeholder="Type a message"  id="message">
+      <button onclick="startChat()" class="start-chat">Start Chat</button>
     </div>
 
   
@@ -235,6 +235,6 @@ Lorem ipsum dolor sit amet consectetur. Non bibendum sit non congue pharetra pul
 
 </footer>
 
-
+<script type="module" src="./assets/propertyDetail.js"></script>
 </body>
 </html>

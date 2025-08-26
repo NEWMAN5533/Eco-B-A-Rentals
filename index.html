@@ -41,6 +41,11 @@
           <li>
             <a href="index.html" class="navbar-link label-medium active">Home</a>
           </li>
+
+            <li>
+            <a href="landlordFormPage.html" class="navbar-link label-medium">Landlord?</a>
+          </li>
+
           <li>
             <a href="rentPage.html" class="navbar-link label-medium">Rent</a>
           </li>
@@ -155,8 +160,8 @@
       </a>
       </div>
 
-      <div class="property-list">
-        <div class="card">
+      <div class="property-list" >
+        <div class="card" data-id="property-card-1">
           <div class="card-banner">
             <figure class=" img-holder" style="--width: 585; --height: 390;">
               <img src="./assets/images/property-1.jpg" width="585" height="390" alt="COVA Home Realty" class="img-cover">
@@ -170,13 +175,13 @@
           </div>
 
           <div class="card-content">
-            <span class="title-large">
+            <span class="title-large" id="price">
             $710.68
             </span>
             <h3>
-              <a href="productDetailPage.html" class="title-small card-title">COVA Home Realty</a>
+              <a href="productDetailPage.html" class="title-small card-title" id="title">COVA Home Realty</a>
             </h3>
-            <address class="body-medium card-text">
+            <address class="body-medium card-text" id="location">
               1901 Thornridge Cir. Shiloh, Hawaii 81063
             </address>
 
@@ -210,11 +215,15 @@
 
 
             </div>
+            <div class="card-btn">
+                <button class="View-detail">View Detail</button>
+
+            </div>
           </div>
         </div>
 
 
-        <div class="card">
+        <div class="card" data-id="property-card-2">
           <div class="card-banner">
             <figure class=" img-holder" style="--width: 585; --height: 390;">
               <img src="./assets/images/property-2.jpg" width="585" height="390" alt="Exit Realty" class="img-cover">
@@ -263,12 +272,17 @@
                 </span>
               </div>
             </div>
+              <div class="card-btn">
+                <button class="
+                View-detail">View Detail</button>
+
+            </div>
           </div>
         </div>
 
 
 
-        <div class="card">
+        <div class="card" data-id="property-card-3">
           <div class="card-banner">
             <figure class=" img-holder" style="--width: 585; --height: 390;">
               <img src="./assets/images/property-3.jpg" width="585" height="390" alt=" The Real Estate Group" class="img-cover">
@@ -317,11 +331,15 @@
                 </span>
               </div>
             </div>
+              <div class="card-btn">
+                <button class="View-detail">View Detail</button>
+
+            </div>
           </div>
         </div>
 
 
-            <div class="card">
+            <div class="card" data-id="property-card-4">
           <div class="card-banner">
             <figure class="img-holder" style="--width: 585; --height: 390;">
               <img src="./assets/images/property-4.jpg" width="585" height="390" alt=" 757 Realty" class="img-cover">
@@ -370,11 +388,15 @@
                 </span>
               </div>
             </div>
+              <div class="card-btn">
+                <button class="View-detail">View Detail</button>
+
+            </div>
           </div>
         </div>
 
 
-            <div class="card">
+            <div class="card" data-id="property-card-5">
           <div class="card-banner">
             <figure class=" img-holder" style="--width: 585; --height: 390;">
               <img src="./assets/images/property-5.jpg" width="585" height="390" alt="Beach Pros Realty Inc." class="img-cover">
@@ -423,12 +445,16 @@
                 </span>
               </div>
             </div>
+              <div class="card-btn">
+                <button class="View-detail">View Detail</button>
+
+            </div>
           </div>
         </div>
 
 
 
-            <div class="card">
+            <div class="card" data-id="property-card-6">
           <div class="card-banner">
             <figure class=" img-holder" style="--width: 585; --height: 390;">
               <img src="./assets/images/property-6.jpg" width="585" height="390" alt=" Keller Williams Elite Town Center" class="img-cover">
@@ -477,12 +503,16 @@
                 </span>
               </div>
             </div>
+              <div class="card-btn">
+                <button class="View-detail">View Detail</button>
+
+            </div>
           </div>
         </div>
 
 
 
-            <div class="card">
+            <div class="card" data-id="property-card-7">
           <div class="card-banner">
             <figure class="img-holder" style="--width: 585; --height: 390;">
               <img src="./assets/images/property-7.jpg" width="585" height="390" alt="All Pros Real Estate" class="img-cover">
@@ -531,12 +561,16 @@
                 </span>
               </div>
             </div>
+              <div class="card-btn">
+                <button class="View-detail">View Detail</button>
+
+            </div>
           </div>
         </div>
 
 
 
-            <div class="card">
+            <div class="card" data-id="property-card-8">
           <div class="card-banner">
             <figure class="figure img-holder" style="--width: 585; --height: 390;">
               <img src="./assets/images/property-8.jpg" width="585" height="390" alt=" FIT Realty" class="img-cover">
@@ -585,6 +619,10 @@
                 </span>
               </div>
             </div>
+              <div class="card-btn">
+                <button class="View-detail">View Detail</button>
+
+            </div>
           </div>
         </div>
 
@@ -592,7 +630,7 @@
 
 
 
-          <div class="card">
+          <div class="card" data-id="property-card-9">
           <div class="card-banner">
             <figure class="figure img-holder" style="--width: 585; --height: 390;">
               <img src="./assets/images/pic4.jpg" width="585" height="390" alt=" FIT Realty" class="img-cover">
@@ -640,6 +678,10 @@
                 <span class="meta-text label-medium">1120 sqft
                 </span>
               </div>
+            </div>
+              <div class="card-btn">
+                <button class="View-detail">View Detail</button>
+
             </div>
           </div>
         </div>
