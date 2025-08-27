@@ -152,7 +152,7 @@ document.querySelectorAll(".carousel").forEach(carousel => {
   setInterval(() => {
     index = (index + 1) % images.length;
     showImage(index);
-  }, 3000); // every 3s
+  }, 10000); // every 3s
 });
 
 
