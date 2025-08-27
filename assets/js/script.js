@@ -107,20 +107,53 @@ $favoriteBtn.forEach($favoriteBtn => {
 
 
 // Select all view buttons
-document.querySelectorAll(".View-detail").forEach(button => {
-  button.addEventListener("click", (e) => {
-    const card = e.target.closest(".card"); // find the parent card
-    const propertyId = card.getAttribute("data-id"); // get property id
+document.querySelectorAll(".View-detail").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const title = btn.dataset.title;
+    const price = btn.dataset.price;
+    const sale = btn.dataset.sale;
+    const rent = btn.dataset.rent;
+    const posted = btn.dataset.posted;
+    const location = btn.dataset.location;
+    const bed = btn.dataset.bed;
+    const imgs = btn.dataset.imgs;
+    const size = btn.dataset.size;
+    const  bath = btn.dataset.bath;
 
-    // Save ID to localStorage
-    localStorage.setItem("propertyId", propertyId);
+     // Redirect to details page with URL params
+    window.location.href = `productDetailPage.html?title=${encodeURIComponent(title)}&price= ${encodeURIComponent(price)}&location=${encodeURIComponent(location)}&bed=${bed}&bath=${bath}&size=${size}&imgs=${imgs}&sale=${sale}&rent=${rent}&posted=${posted}`;
+  } )
+})
 
-    // Redirect to details page
-    window.location.href = "productDetailPage.html";
+
+// Carousel logic for each card
+document.querySelectorAll(".carousel").forEach(carousel => {
+  const images = carousel.querySelectorAll("img");
+  const prevBtn = carousel.querySelector(".prev");
+  const nextBtn = carousel.querySelector(".next");
+  let index = 0;
+
+  function showImage(i) {
+    images.forEach(img => img.classList.remove("active"));
+    images[i].classList.add("active");
+  }
+
+  prevBtn.addEventListener("click", () => {
+    index = (index - 1 + images.length) % images.length;
+    showImage(index);
+  });
+
+  nextBtn.addEventListener("click", () => {
+    index = (index + 1) % images.length;
+    showImage(index);
+  });
+
+  // Auto-slide (optional)
+  setInterval(() => {
+    index = (index + 1) % images.length;
+    showImage(index);
+  }, 3000); // every 3s
 });
-});
-
-
 
 
 

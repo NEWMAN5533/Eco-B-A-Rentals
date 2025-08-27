@@ -1,66 +1,49 @@
- import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
-    import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+// Get URL params
+const urlParams = new URLSearchParams(window.location.search);
 
-    // ✅ Your Firebase config here
-    const firebaseConfig = {
-      apiKey: "AIzaSyAbl6EegtrvgIkoeNiJeC0H6s0LCHLbaHs",
-      authDomain:  "ecoba-e887f.firebase.com",
-      projectId: "ecoba-e887f",
-      storageBucket: "ecoba-e887f.firebasestorage.app",
-      messagingSenderId: "92601323665",
-      appId: "1:92601323665:web:cbf1d2da570eb90237af30"
-    };
+document.getElementById("detail-title").innerText = urlParams.get("title");
+document.getElementById("detail-price").innerText = "GH₵: " + urlParams.get("price");
+document.getElementById("detail-location").innerText = urlParams.get("location");
+document.getElementById("detail-bed").innerText = urlParams.get("bed") + " Beds";
+document.getElementById("detail-bath").innerText = urlParams.get("bath") + " Baths";
+document.getElementById("detail-size").innerText = urlParams.get("size");
 
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
+// Handle carousel images
+const imgList = urlParams.get("imgs").split(",");
+const carousel = document.getElementById("detail-carousel");
+let index = 0;
 
-    // ✅ Get propertyId from localStorage
-    const propertyId = localStorage.getItem("propertyId");
+// Insert images dynamically
+imgList.forEach((src, i) => {
+  const img = document.createElement("img");
+  img.src = src;
+  if (i === 0) img.classList.add("active");
+  carousel.appendChild(img);
+});
 
-    // ✅ Fetch property details
-    async function loadProperty() {
-      if (!propertyId) {
-        document.getElementById("property-details").innerHTML = "<p>No property selected.</p>";
-        return;
-      }
+// Select images + nav buttons
+const images = carousel.querySelectorAll("img");
+const prevBtn = carousel.querySelector(".prev");
+const nextBtn = carousel.querySelector(".next");
 
-      const docRef = doc(db, "properties", propertyId);
-      const docSnap = await getDoc(docRef);
+function showImage(i) {
+  images.forEach(img => img.classList.remove("active"));
+  images[i].classList.add("active");
+}
 
-      if (docSnap.exists()) {
-        const data = docSnap.data();
-        document.getElementById("property-details").innerHTML = `
-          <img src="${data.imageUrl}" alt="${data.title}" width="300">
-          <h2>${data.title}</h2>
-          <p><strong>Location:</strong> ${data.location}</p>
-          <p><strong>Price:</strong> ${data.price}</p>
-          <p><strong>Description:</strong> ${data.description || "No description available"}</p>
-          <input type="text" id="chatMessage" placeholder="Type your message to landlord...">
-          <button id="startChat">Start Chat on WhatsApp</button>
-          <button id="callLandlord">Call Landlord</button>
-        `;
+// Navigation
+prevBtn.addEventListener("click", () => {
+  index = (index - 1 + images.length) % images.length;
+  showImage(index);
+});
 
-        // ✅ WhatsApp button
-        document.getElementById("startChat").addEventListener("click", () => {
-          const message = document.getElementById("chatMessage").value;
-          const phone = data.landlordPhone; // must exist in Firestone
-          const url = `https://wa.me/${233535565637}?text=${encodeURIComponent(message)}`;
-          window.open(url, "_blank");
-        });
+nextBtn.addEventListener("click", () => {
+  index = (index + 1) % images.length;
+  showImage(index);
+});
 
-        // ✅ Call button
-        document.getElementById("callLandlord").addEventListener("click", () => {
-          const phone = data.landlordPhone; // must exist in Firestone
-          window.location.href = `tel:${phone}`;
-        });
-
-      } else {
-        document.getElementById("property-details").innerHTML = "<p>Property not found.</p>";
-      }
-    }
-
-    loadProperty();
-
-
-// Note: Ensure that each property document in Firestone has a 'landlordPhone' field for the call and WhatsApp functionality to work. //
-// Duplicate propertyId declaration removed to prevent redeclaration error.
+// Optional auto-slide
+setInterval(() => {
+  index = (index + 1) % images.length;
+  showImage(index);
+}, 8000);

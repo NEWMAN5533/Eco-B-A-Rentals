@@ -14,7 +14,7 @@
 <nav class="login-bar">
 
   <div class="left">
-<img src="./favicon.svg" alt="logo">
+<a href="index.html"><img src="./favicon.svg" alt="logo"></a>
   </div>
   <!----HAMBURGER FOR MENU-ICON----->
  <div class="right">
@@ -32,16 +32,17 @@
   <div class="image-container">
   <div class="detail-badge">
     <!-------BADGE------>
-      <span class="badge">Sale</span>
-      <span class="label-medium">10 days ago</span>
+      <span id="detail-sale" class="badge">Sale</span>
+      <span id="detail-posted" class="label-medium">10 days ago</span>
     <!--------ENDS------>
   </div>
     <div class="image-track-left">
-      <img src="./assets/images/pic6.jpg" alt="image" class="property-detail-pics">
-    </div>
-    <div class="image-track-right">
-      <img id="image" src="./assets/images/pic6.jpg" alt="image" class="property-detail-pics">
+      <div class="carousel" id="detail-carousel">
+  <button class="prev">❮</button>
+  <button class="next">❯</button>
+</div>
 
+    </div>
 
     </div>
 <!------container ends----->
@@ -49,20 +50,38 @@
   <!-------btt-->
 <div class="bottom-content">
   <div class="location-detail">
-    <small id="location">Brong Ahafo, Sunyani Municipal, 10 days ago</small>
+    <small id="detail-location">Brong Ahafo, Sunyani Municipal, 10 days ago</small>
     <h6><small>Promoted</small></h6>
   </div>
 
   <div class="property-detail-title">
-    <h5 id="title">5 Bed rooms at Sunyani Municipal <br> for sale</h5>
+    <h5 id="detail-title">5 Bed rooms at Sunyani Municipal <br> for sale</h5>
   </div>
 
   <div class="property-price">
-    <h3 id="price">GH₵: 1,500,00</h3>
+    <h3 id="detail-price">GH₵: 1,500,00</h3>
     <div class="price-history">
       <h5>price History ></h5>
     </div>
   </div>
+  <!-------property-meta-data-->
+  <div class="property-meta-data">
+    <div class="meta-item">
+      <span class="material-icons">bed</span>
+      <p id="detail-bed">3 Beds</p>
+    </div>
+
+    <div class="meta-item">
+      <span class="material-icons">bathtub</span>
+      <p id="detail-bath">2 Baths</p>
+    </div>
+
+    <div class="meta-item">
+      <span class="material-icons">square_foot</span>
+      <p id="detail-size">1430 sqft</p>
+    </div>
+  </div>
+  <!-------REQUEST CALL BTN------>
 
   <div class="request-call-btns">
  <button class="call-btn openHover">Request Call</button> 

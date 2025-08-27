@@ -164,7 +164,19 @@
         <div class="card" data-id="property-card-1">
           <div class="card-banner">
             <figure class=" img-holder" style="--width: 585; --height: 390;">
-              <img src="./assets/images/property-1.jpg" width="585" height="390" alt="COVA Home Realty" class="img-cover">
+    <div class="carousel">
+    <img src="./assets/images/IMG-20250820-WA0015.jpg" class="active" alt="House 1">
+    <img src="./assets/images/IMG-20250820-WA0013.jpg" alt="House 1">
+    <img src="./assets/images/property-3.jpg" alt="House 1">
+    <img src="./assets/images/property-1.jpg" width="585" height="390" alt="COVA Home Realty" class="img-cover">
+
+    <!-- Navigation arrows -->
+    <button class="prev">❮</button>
+    <button class="next">❯</button>
+  </div>
+
+
+             
             </figure>
             <span class="badge label-medium">Sale</span>
             <span class="badge label-medium type">10 days ago</span>
@@ -176,12 +188,12 @@
 
           <div class="card-content">
             <span class="title-large" id="price">
-            $710.68
+            710.68
             </span>
             <h3>
-              <a href="productDetailPage.html" class="title-small card-title" id="title">COVA Home Realty</a>
+              <a href="productDetailPage.html" class="title-small card-title" >COVA Home Realty</a>
             </h3>
-            <address class="body-medium card-text" id="location">
+            <address class="body-medium card-text">
               1901 Thornridge Cir. Shiloh, Hawaii 81063
             </address>
 
@@ -215,15 +227,27 @@
 
 
             </div>
+            <!-------LINKING ATTRIBUTE TO THE--BTN------>
             <div class="card-btn">
-                <button class="View-detail">View Detail</button>
-
-            </div>
+  <button class="View-detail"
+    data-title="COVA Home Realty"
+    data-price="710.68"
+    data-sale="sale"
+    data-posted="10 days ago"
+    data-location="1901 Thornridge Cir. Shiloh, Hawaii 81063"
+    data-bed="3"
+    data-bath="2"
+    data-size="1430 sqft"
+    data-imgs="./assets/images/property-1.jpg,./assets/images/property-3.jpg,./assets/images/IMG-20250820-WA0013.jpg,./assets/images/IMG-20250820-WA0015.jpg"
+    onclick="handleViewDetail(this)">
+    View Detail
+  </button>
+</div>
           </div>
         </div>
 
 
-        <div class="card" data-id="property-card-2">
+        <div class="card">
           <div class="card-banner">
             <figure class=" img-holder" style="--width: 585; --height: 390;">
               <img src="./assets/images/property-2.jpg" width="585" height="390" alt="Exit Realty" class="img-cover">

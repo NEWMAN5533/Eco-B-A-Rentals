@@ -13,7 +13,7 @@ body {
   padding: 0;
   width: 100%;
   height: 100vh;
-  background: #f3f3f3;
+  background: #d4d2d2;
   overflow-y: auto;
 }
 
@@ -251,9 +251,9 @@ header {
 **/
 .image-track-left{
   display: flex;
-  width: 50%;
+  width: 100%;
   height: 100%;
-  border-radius: 0.2rem;
+  border-radius: .5rem;
   object-fit: cover;
 border: 0.1px solid rgb(252, 251, 251);
   z-index: -3;
@@ -294,15 +294,6 @@ z-index: 3;
 }
 
 
-.image-track-right{
-  display: flex;
-  width: 50%;
-  height: 100%;
-  justify-content: right;
-  border: 0.1px solid rgb(252, 251, 251);
-  border-radius: 0.2rem;
-  object-fit: cover;
-}
 
 .image-track-left .property-detail-pics {
   width: 100%;
@@ -324,15 +315,27 @@ z-index: 3;
 * BOTTOM CONTENT
 **/
 .bottom-content {
-  width: 94%;
-  height: 10rem;
+  width: 80%;
+  height: 14rem;
   justify-self: center;
   align-items: center;
-  background-color: rgb(255, 255, 255);
-  margin-top: -3rem;
+  background-color: rgb(250, 248, 248);
+  margin: -16rem auto 0 auto;
+  position: relative;
   z-index: 10;
   overflow: hidden;
   border-radius: 0.5rem;
+}
+
+.property-meta-data {
+  width: 100%;
+  height: auto;
+  display: flex;
+  color: rgb(17, 191, 214);
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 0 1rem;
 }
 
 .location-detail {
@@ -347,14 +350,14 @@ z-index: 3;
 
 .location-detail small {
   color: rgb(139, 134, 134);
-  font-size: 9px;
+  font-size: 12px;
   margin-left: 1rem;
   text-align: center;
 }
 
 .location-detail h6 small{
   margin-right: 1rem;
-  font-size: 9px;
+  font-size: 13px;
   border: 1px solid #ccc;
   text-align: center;
   justify-self: center;
@@ -372,7 +375,7 @@ z-index: 3;
   align-items: center;
   padding-left: 1rem;
   margin-top: 3px;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: 600;
   font-family: Arial;
 }
@@ -550,7 +553,48 @@ margin-bottom: 4rem;
   background-color: rgb(30, 62, 142);
 }
 
+/**
+CAROUSEL
+**/
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%; 
+  overflow: hidden;
+  border-radius: 10px;
+}
 
+.carousel img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.carousel img.active {
+  display: block;
+}
+
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carousel .prev {
+  left: 10px;
+}
+
+.carousel .next {
+  right: 10px;
+}
 
 
 
