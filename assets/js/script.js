@@ -72,37 +72,40 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebas
 /**
  * navbar toggle in mobile
  */
+const $navbar = document.querySelector("[data-navbar]");
+const $navbarToggler = document.querySelector("[data-nav-toggler]");
 
-const /** {nodeElement} */ $navbar = document.querySelector("[data-navbar]");
-const /** {nodeElement} */ $navbarToggler = document.querySelector("[data-nav-toggler]");
+$navbarToggler.addEventListener("click", () => {
+  $navbar.classList.add("active");
+});
 
-$navbarToggler.addEventListener("click", ()=> $navbar.classList.add("active"));
+// to remove the navbar when clicked outside //
+window.addEventListener("click", function (e) {
+  // ✅ check if click is outside BOTH navbar and toggle button
+  if (!$navbar.contains(e.target) && !$navbarToggler.contains(e.target)) {
+    $navbar.classList.remove("active"); // better to toggle class instead of display:none
+  }
+});
 
 /**
  * Header scroll state
  */
-
-const /** {NodeElement} */ $header = document.querySelector("[data-header]");
-/**
- * Header scroll state
- */
-window.addEventListener("scroll", (e)=>
-$header.classList[window.scrollY > 50 ? "add" : "remove"]("active"));
-
-
+const $header = document.querySelector("[data-header]");
+window.addEventListener("scroll", () =>
+  $header.classList[window.scrollY > 50 ? "add" : "remove"]("active")
+);
 
 /**
  * ADDING TOGGLE MODE TO FAVORITE BTN 
  */
+const $favoriteBtn = document.querySelectorAll("[favorite-data-btn]");
 
-const /** {NodeList} */ $favoriteBtn = document.querySelectorAll("[favorite-data-btn]");
+$favoriteBtn.forEach(btn => {
+  btn.addEventListener("click", () => {
+    btn.classList.toggle("active"); // use toggle instead of add (so it can un-favorite too)
+  });
+});
 
-$favoriteBtn.forEach($favoriteBtn => {
-  $favoriteBtn.addEventListener("click" , () => {
-    $favoriteBtn.classList.add("active");
-  })
-}
-);
 
 
 
