@@ -1252,6 +1252,7 @@ PROPERTY LISTINGS
   color: rgb(41, 39, 39);
   border-end-end-radius: 5rem;
   border-start-start-radius: 5rem;
+  box-shadow: inset 10px 10px 15px #f1f1f1,inset -10px -10px 15px #f1f1f1 ;
 
 }
 
