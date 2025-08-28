@@ -984,7 +984,7 @@ transition: var(--transition-duration-quick) var(--transition-easing-quick);
 .hero .container {
   width: 100%;
   margin: 0;
-  height: auto;
+  height: 28rem;
   display: flex;
 }
 
@@ -1237,22 +1237,22 @@ PROPERTY LISTINGS
   width: 100%;
   justify-self: center;
   height: 7.5rem;
-  background-color: rgba(15, 37, 233, 0.74);
-  border: 1px solid rgb(108, 214, 214);
+  background-color: rgba(80, 80, 85, 0.74);
+
   margin-bottom: 2rem;
 }
 .property-listings {
   display: flex;
-  width: 40%;
+  width: 60%;
   height: 7rem;
   align-items: center;
   justify-content: center;
-  background-color: rgba(168, 2, 233, 0.733);
+  background-color: rgb(255, 255, 255);
   margin-bottom: rem;
-  color: white;
+  color: rgb(41, 39, 39);
   border-end-end-radius: 5rem;
   border-start-start-radius: 5rem;
-  box-shadow: 2px 2px 5px #5472c5, -2px -2px 5px #5475ce;
+
 }
 
 
