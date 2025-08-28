@@ -1194,6 +1194,67 @@ font-family: 'Courier New', Courier, monospace;
 }
 
 
+.tittle-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.144);
+  flex-direction: column;
+  justify-self: center;
+  padding: 3rem;
+  margin-block-end: 2rem;
+  text-align: center;
+  box-shadow: 2px 2px 5px #e7e6e6, -2px -2px 5px #f3f3f3 ;
+}
+
+.tittle-wrapper h2 {
+  line-height: 4rem;
+  color: #1751a8
+}
+
+.tittle-wrapper p {
+  font-size: 2.3rem;
+  padding: 1.5rem;
+}
+
+.tittle-wrapper p span {
+  color: rgb(11, 19, 126);
+  font-size: 3rem;
+  padding-top: 10px;
+  font-weight: 600;
+}
+
+
+/**
+PROPERTY LISTINGS
+**/
+
+.pl-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  justify-self: center;
+  height: 7.5rem;
+  background-color: rgba(15, 37, 233, 0.74);
+  border: 1px solid rgb(108, 214, 214);
+  margin-bottom: 2rem;
+}
+.property-listings {
+  display: flex;
+  width: 40%;
+  height: 7rem;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(168, 2, 233, 0.733);
+  margin-bottom: rem;
+  color: white;
+  border-end-end-radius: 5rem;
+  border-start-start-radius: 5rem;
+  box-shadow: 2px 2px 5px #5472c5, -2px -2px 5px #5475ce;
+}
+
 
 
 /*-----------------------------------*\
