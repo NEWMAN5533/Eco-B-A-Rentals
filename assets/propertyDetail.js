@@ -8,17 +8,17 @@ document.getElementById("detail-bed").innerText = urlParams.get("bed") + " Beds"
 document.getElementById("detail-bath").innerText = urlParams.get("bath") + " Baths";
 document.getElementById("detail-size").innerText = urlParams.get("size");
 
-// Handle carousel images
+// === Handle carousel images ===
 const imgList = urlParams.get("imgs").split(",");
 const carousel = document.getElementById("detail-carousel");
 let index = 0;
 
-// Insert images dynamically
+// Insert images dynamically (before buttons)
 imgList.forEach((src, i) => {
   const img = document.createElement("img");
   img.src = src;
   if (i === 0) img.classList.add("active");
-  carousel.appendChild(img);
+  carousel.insertBefore(img, carousel.querySelector(".next")); // add before button
 });
 
 // Select images + nav buttons

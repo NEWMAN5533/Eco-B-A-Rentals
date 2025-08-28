@@ -287,13 +287,12 @@ header {
   max-width: 600px;
   display: flex;
   flex-direction: column;
-  display: flex;
   position: relative;
   margin-top: 4rem;
   background-color: rgba(146, 145, 145, 0.11);
   border: 1px solid #ccc;
   padding: 2rem;
-  z-index: -1;
+  /* ✅ removed z-index:-1 so inputs are clickable */
 }
 
 /**
@@ -321,13 +320,17 @@ header {
   font-family: var(--font-primary);
 }
 
+/* ✅ Fixed focus styles for inputs */
 .landlord-form input:focus {
   border: 2px solid var(--primary-40);
-  background-color: none;
+  background-color: var(--neutral-98); /* instead of "none" */
   color: var(--neutral-5);
-  ::placeholder {
-    color: var(--neutral-5)
-  }
+}
+
+.landlord-form textarea:focus {
+  border: 2px solid var(--primary-40);
+  background-color: var(--neutral-98); /* instead of "none" */
+  color: var(--neutral-5);
 }
 
 .landlord-form textarea {
@@ -353,14 +356,7 @@ header {
   font-family: var(--font-primary);
 }
 
-.landlord-form textarea:focus {
-  border: 2px solid var(--primary-40);
-  background-color: none;
-  color: var(--neutral-5);
-  ::placeholder {
-    color: var(--neutral-5)
-  }
-}
+
 
 form {
   display: flex;

@@ -559,42 +559,46 @@ CAROUSEL
 .carousel {
   position: relative;
   width: 100%;
-  height: 100%; 
+  max-width: 600px;
+  height: 400px;
+  margin: auto;
   overflow: hidden;
   border-radius: 10px;
 }
 
 .carousel img {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .carousel img.active {
-  display: block;
+  opacity: 1;
+  z-index: 1;
 }
 
-.carousel button {
+.carousel button.prev,
+.carousel button.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   border: none;
-  padding: 8px 12px;
+  padding: 10px 15px;
+  font-size: 20px;
   cursor: pointer;
   border-radius: 50%;
+  z-index: 2;
 }
 
-.carousel .prev {
-  left: 10px;
-}
-
-.carousel .next {
-  right: 10px;
-}
+.carousel button.prev { left: 10px; }
+.carousel button.next { right: 10px; }
 
 
 

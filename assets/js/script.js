@@ -1,67 +1,91 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
-    import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
 
+// Firebase config
+const firebaseConfig = {
+  apiKey: "AIzaSyAbl6EegtrvgIkoeNiJeC0H6s0LCHLbaHs",
+  authDomain: "ecoba-e887f.firebase.com",
+  projectId: "ecoba-e887f",
+  storageBucket: "ecoba-e887f.firebasestorage.app",
+  messagingSenderId: "92601323665",
+  appId: "1:92601323665:web:cbf1d2da570eb90237af30"
+};
 
-// Your web app's Firebase configuration //
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
-        const firebaseConfig = {
-      apiKey: "AIzaSyAbl6EegtrvgIkoeNiJeC0H6s0LCHLbaHs",
-      authDomain: "ecoba-e887f.firebase.com",
-      projectId: "ecoba-e887f",
-      storageBucket:  "ecoba-e887f.firebasestorage.app",
-      messagingSenderId: "92601323665",
-      appId: "1:92601323665:web:cbf1d2da570eb90237af30"
-    };
+// Load properties from Firestore
+async function loadProperties() {
+  const querySnapshot = await getDocs(collection(db, "properties"));
+  const container = document.querySelector("#property-list"); 
 
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
+  container.innerHTML = "";
 
-    // Load properties from Firestore
-    async function loadProperties() {
-      const querySnapshot = await getDocs(collection(db, "properties"));
-      const container = document.querySelector("property-list");
+  querySnapshot.forEach((doc) => {
+    const data = doc.data();
+    const images = data.images || [];
 
-      querySnapshot.forEach((doc) => {
-        const data = doc.data();
-        const card = document.createElement("div");
-        card.classList.add("property-card");
+    const card = document.createElement("div");
+    card.classList.add("property-card");
 
-        card.innerHTML = `
-          <img src="${data.imageUrl}" alt="${data.title}" />
-          <h3>${data.title}</h3>
-          <p>Location: ${data.location}</p>
-          <p>price: ${data.price}</p>
-          <button onclick="viewDetails('${doc.id}')">View Details</button>
-        `;
+    // Carousel HTML
+    let carousel = `
+      <div class="carousel">
+        ${images.map((url, i) => `
+          <img src="${url}" class="${i === 0 ? "active" : ""}" alt="Property image" />
+        `).join("")}
+        <button class="prev">‹</button>
+        <button class="next">›</button>
+      </div>
+    `;
 
-        //  Navigate to detail page on button click //
-        function goToDetailPage() {
-          localStorage.setItem("propertyId", doc.id);
-          window.location.href = "detail.html";
-        }
+    // Card inner content
+    card.innerHTML = `
+      ${carousel}
+      <h3>${data.title}</h3>
+      <p>Location: ${data.location}</p>
+      <p>Price: ${data.price}</p>
+      <button class="view-detail">View Details</button>
+    `;
 
-        // Click event for the button //
-        card.addEventListener("click", (e) => {
-          if (! e.target.classList.contains("view-detail")){
-            goToDetailPage();
-          }
-        });
+    // ✅ Button to go to details
+    card.querySelector(".view-detail").addEventListener("click", () => {
+      // Option 1: Use localStorage
+      localStorage.setItem("propertyId", doc.id);
+      window.location.href = "productDetailPage.html";
 
-        card.querySelector(".view-detail").addEventListener("click", goToDetailPage);
+      // OR Option 2: Pass via URL
+      // window.location.href = `productDetailPage.html?id=${doc.id}`;
+    });
 
-        container.appendChild(card);
-      });
+    container.appendChild(card);
+
+    // Carousel logic
+    const imgs = card.querySelectorAll("img");
+    const prevBtn = card.querySelector(".prev");
+    const nextBtn = card.querySelector(".next");
+    let index = 0;
+
+    function showImage(i) {
+      imgs.forEach(img => img.classList.remove("active"));
+      imgs[i].classList.add("active");
     }
 
-    loadProperties();
+    prevBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      index = (index - 1 + imgs.length) % imgs.length;
+      showImage(index);
+    });
 
-    // Save ID to localStorage and redirect
-    window.viewDetails = function(id) {
-      localStorage.setItem("propertyId", id);
-      window.location.href = "detail.html";
-    }
+    nextBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      index = (index + 1) % imgs.length;
+      showImage(index);
+    });
+  });
+}
 
-
+loadProperties();
 
 
 
