@@ -1643,6 +1643,7 @@ PROPERTY LISTINGS
   width: 100%;
   padding-block: 4px;;
   margin: 0;
+  justify-self: center;
 }
 
 .footer .logo-footer{
@@ -1740,6 +1741,7 @@ PROPERTY LISTINGS
     min-width: 98%;
     padding: 0 1rem;
     margin: 0;
+    justify-self: center;
  
   }
 
@@ -1819,6 +1821,7 @@ PROPERTY LISTINGS
     overflow: hidden;
     justify-content: center;
     align-items: center;
+    justify-self: center;
   }
   .hero-banner{
     min-width: 100%;
@@ -1878,6 +1881,7 @@ PROPERTY LISTINGS
 
   .container {
     max-width: 720px;
+    justify-self: center;
   }
 
   .section {
@@ -1904,6 +1908,7 @@ PROPERTY LISTINGS
 .search-bar {
 grid-template-columns: 160px 160x 1fr max-content;
 gap: 0;
+justify-self: center;
 }
 
 .search-item .material-symbols-rounded {
@@ -2039,6 +2044,7 @@ background-color: var(--neutral-90);
 
 .container {
   max-width: 950px;
+  justify-self: center;
 }
 
 /**
@@ -2120,6 +2126,7 @@ color: var(--neutral-100);
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 20px;
+  justify-self: center;
 }
 
 .hero-content {
@@ -2172,10 +2179,12 @@ color: var(--neutral-100);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  justify-self: center;
 }
 
 .feature-content {
   padding: 40px;
+  justify-self: center;
 }
 
 .feature-list {
@@ -2236,8 +2245,13 @@ color: var(--neutral-100);
 * HERO 
 **/
 .hero .container {
-  min-width: 90%;
+  width: 100%;
+  margin: 10px;
   align-items: center;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  justify-content: center;
 }
 
 .container a{
@@ -2250,7 +2264,14 @@ color: var(--neutral-100);
 
 
 .hero-content {
-  grid-column: 1/6;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.hero-content .headline-large {
+  font-size: 72px;
+  color: rgb(0, 225, 255);
 }
 
 .hero-banner {
@@ -2275,15 +2296,27 @@ color: var(--neutral-100);
 }
 
 /** SEARCH BTN **/
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ;
+  height: 30rem;
+  width: 100%;
+  background-color: transparent;
+  margin-top: 3rem;
 
-.hero .search-bar{
-  height: 11rem;
-  margin-top: 4rem;
-
+}
+ .search-bar{
+display: block;
+height: max-content;
+justify-self: center;
 }
 
 .search-btn{
-  margin-block-end: 3rem;
+  margin-block-end: 1rem;
+  height: 8.4rem;
+  font-size: 3rem;
 }
 
 /** SEARCH BTN ENDS
@@ -2292,6 +2325,18 @@ color: var(--neutral-100);
 .navbar-wrapper {
   margin-right: 4rem;
 }
+
+.tittle-wrapper {
+display: flex;
+height: 35rem;
+width: 100%;
+}
+
+.pl-container {
+  margin-top: 5rem;
+  justify-self: center;
+}
+
 
 
 
@@ -2307,6 +2352,28 @@ color: var(--neutral-100);
 **/
 .feature-content {
   padding: 60px;
+  justify-content: center;
+}
+
+.feature-content .h2-headline {
+  width: auto;
+  line-height: 6rem;
+}
+
+.feature-content p {
+  font-size: 2.3rem;
+  font-family: 'Courier New', Courier, monospace;
+  border-block-end: 1px solid #ccc;
+  width: 100%;
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.404);
+  text-align: center;
+  padding: 1rem;
+  padding-bottom: 1rem;
+  color: white;
+  border-end-end-radius: 6rem;
+  border-start-start-radius: 6rem;
+  background-color: rgba(7, 7, 7, 0.534);
 }
 
 .feature-list{
@@ -2318,35 +2385,51 @@ color: var(--neutral-100);
 * STORY
 **/
 
+.section-subtitle {
+  margin-left: 1.5rem;
+  padding-bottom: 20px;
+  border: 1px solid #ccc;
+  width: max-content;
+  padding: 1.2rem;
+  background-color: var(--primary-80);
+  color: white;
+  border-end-end-radius: 3.4rem;
+  border-start-start-radius: 3.4rem;
+}
+
+
+
 .story .section-title {
-  max-width: 820px;
+  max-width: 100%;
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+  line-height: var(--lh-title-medium);
 }
 
 .story-list {
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
 }
-
-.story-card:where(:nth-child(3), :nth-child(6)) {
-  grid-column: span 3;
-}
-
-.story-card:where(:nth-child(2), :nth-child(5)) {
-  grid-column: span 4;
-}
-
-.story-card:where(:nth-child(2), :nth-child(4)) {
-  grid-column: span 5;
-}
-
 /**
 * FOOTER
 **/
+.footer {
+  height: auto;
+  width: 100vw;
+  margin: 0;
+  padding:  6rem ;
+}
+
+.footer-nav {
+  padding-right: 10rem;
+}
 
 .footer-brand {
   grid-column: auto;
 }
 
 .footer-top .container {
-  grid-template-columns: 580px repeat(3, 1fr);
+  grid-template-columns: 480px repeat(3, 1fr);
+ 
 }
 }

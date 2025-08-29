@@ -38,19 +38,36 @@
 
 
   <!------ LANDLORD FORM ---------->
-<form id="propertyForm" class="landlord-form">
+  <div class="form-container">
+       <form id="propertyForm" class="landlord-form">
+     <!--------FORM 1------->
+      <div class="form-1">
+        
+        <div class="right">
+          
+      <!----FORM 1-->
   <input type="text" id="title" placeholder="Property Title (e.g. 2-Bedrooms Apartment)" required><br>
 
   <input type="text" id="location" placeholder="Location (e.g. Sunyani Fiapre)" required><br>
 
-  <input type="number" id="price" placeholder="Price (e.g. 1200)" required><br>
-
-  <input type="number" id="area" placeholder="Area (sqft)" required><br>
 
   <input type="number" id="beds" placeholder="Number of Bedrooms" required><br>
 
   <input type="number" id="baths" placeholder="Number of Bathrooms" required><br>
 
+  <!-------ENDS OF FORM 1------->
+
+        </div>
+      </div>
+
+
+      <!---FORM 2----->
+        <div class="form-1">
+        
+        <div class="right">
+          
+      <!----FORM 2-->
+  
   <select id="status" required>
     <option value="">-- Select Status --</option>
     <option value="rent">For Rent</option>
@@ -60,14 +77,38 @@
   <textarea id="description" placeholder="Property Description"></textarea><br>
 
   <!-- File upload -->
-  <input type="file" id="images" accept="image/*" multiple required>
+  <input type="file" id="images" class="image-input" accept="image/*" multiple required>
   <p>Upload up to 4 images</p>
   <br>
+  <!-------ENDS OF FORM 1------->
+
+        </div>
+      </div>
+
+
+      <!---FORM 3----->
+        <div class="form-1">
+      
+        <div class="right">
+          
+      <!----FORM 3-->
+  
+    <input type="number" id="price" placeholder="Price (e.g. 1200)" required><br>
+
+  <input type="number" id="area" placeholder="Area (sqft)" required><br>
 
   <input type="tel" id="landlordPhone" placeholder="Landlord Phone Number (e.g. 23354xxxxxxx)" required><br>
+ 
+  <!-------ENDS OF FORM 1------->
+
+        </div>
+      </div>
 
   <button type="submit">Submit</button>
 </form>
+
+  </div>
+
 
 
   </div>
