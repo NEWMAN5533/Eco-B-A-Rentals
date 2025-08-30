@@ -247,17 +247,33 @@ overflow: hidden;
   margin-bottom: 2rem;
 }
 
+.select{
+  padding: 0.5rem;
+  border: 1px solid #bbbfdf;
+  border-start-start-radius: 1.4rem;
+  border-end-end-radius: 1.4rem;
+  background-color: #162ddb;
+  color: white;
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
+
+.upload {
+  color: white;
+  font-size: 1.3rem;
+  padding: 0.5rem;
+}
+
 
 .landlord-form-header {
-  width: 100%;
-  height: 16rem;
-  background-color: rgba(255,255,255,0.4);
+  width: 640px;
+  height: 17rem;
+  background-color: rgba(255,255,255,0);
   text-align: center;
   font-size: var(--fs-headline-small);
   font-weight: 500;
   padding: 2rem;
-  border: 1px solid white;
- 
   overflow: hidden;
   z-index: 1;
 }
@@ -268,7 +284,7 @@ overflow: hidden;
   ans-serif);
   font-size: 1.5rem;
   color: white;
-  background-color: rgb(177, 27, 27);
+  background-color: #283599;
   padding: 0.5rem;
   letter-spacing: var(--tracking-p-05);
   border-start-start-radius: 2rem;
@@ -290,12 +306,12 @@ overflow: hidden;
 **/
 .form-1 {
   width: 98%;
-  height: 24rem;
+  height: 28rem;
   background-color: transparent;
   display: flex;
   align-items: center;
-  padding: 3rem;
-  border: 1px solid rgb(177, 27, 27);
+  padding: 1rem;
+  border: none;
   justify-content: center;
   margin: 0 2rem;
   gap: 2rem;
@@ -306,16 +322,17 @@ overflow: hidden;
 
 .form-1 .right {
   width: 100%;
-  height: 22rem;
+  height: 25rem;
   display: flex;
   flex-direction: column;
-  border-radius: 2rem;
+  border-radius: 1rem;
   padding: 1rem;
-  background-color: rgb(252, 249, 249);
+  background-color: rgb(31, 32, 116);
+  box-shadow: 0 0 2px #162ddb;
 }
 
 .form-container {
-  width: 100%;
+  width: 40rem;
   height: auto;
   display: flex;
   justify-content: space-between;
@@ -326,8 +343,10 @@ overflow: hidden;
   gap: 3rem;
   margin-bottom: 3rem;
 }
+
+
 .landlord-form {
-  width: 100%;
+  width: 49rem;
   max-width: 90%;
   display: flex;
   flex-direction: column;
@@ -338,7 +357,7 @@ overflow: hidden;
   border: 1px solid white;
   padding: 1rem;
   position: relative;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0.1);
 
   /* ✅ removed z-index:-1 so inputs are clickable */
 }
@@ -347,10 +366,10 @@ overflow: hidden;
 * FORM INPUT 
 **/
 .landlord-form input {
-  width: auto;
+  width: 24rem;
   height: 3.8rem;
   padding: 0 1rem;
-  background-color: #f1eeee;
+  background-color: #ffffff;
   color: #fff;
   font-size: 1.1rem;
   border: 0.1px solid #ccc;
@@ -362,9 +381,13 @@ overflow: hidden;
 }
 
 .landlord-form input:where(:hover, :focus){
-  background-color: rgb(177, 27, 27);
+  background-color: #21264d;
   color: white;
 }
+
+
+
+
 
 .image-input {
   display: flex;
@@ -374,9 +397,8 @@ overflow: hidden;
 }
 .landlord-form input::placeholder {
   color: var(--neutral-5);
-  font-size: 1rem;
-  font-weight: 400;
-  font-family: var(--font-primary);
+  font-size: 17px;
+  font-weight: 500;
 }
 
 /* ✅ Fixed focus styles for inputs */
