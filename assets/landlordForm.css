@@ -284,7 +284,7 @@ overflow: hidden;
   ans-serif);
   font-size: 1.5rem;
   color: white;
-  background-color: #283599;
+  background-color: #273aca;
   padding: 0.5rem;
   letter-spacing: var(--tracking-p-05);
   border-start-start-radius: 2rem;
@@ -327,7 +327,7 @@ overflow: hidden;
   flex-direction: column;
   border-radius: 1rem;
   padding: 1rem;
-  background-color: rgb(31, 32, 116);
+  background-color: rgb(21, 24, 177);
   box-shadow: 0 0 2px #162ddb;
 }
 
